@@ -1,0 +1,547 @@
+avaliação diagnóstica ra1
+Pergunta na posição 1
+1
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 1 
+
+Numa lista encadeada simples, o que significa inicio == null?
+
+ 
+
+
+A lista tem exatamente um elemento.
+
+
+A lista está vazia.
+
+
+A lista está cheia.
+
+
+O último nó foi alcançado.
+
+
+A lista é circular.
+
+Pergunta na posição 2
+2
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 2 
+
+Uma pilha vazia recebe, nesta ordem: empilhar(5), empilhar(8), empilhar(2), desempilhar().
+
+ 
+
+Qual valor fica no topo?
+
+
+5
+
+
+2
+
+
+8
+
+
+A pilha ficou vazia
+
+
+Nenhuma das alternativas
+
+Pergunta na posição 3
+3
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 3 
+
+Uma fila vazia recebe, nesta ordem: enfileirar(7), enfileirar(9), desenfileirar().
+
+
+7
+
+
+9
+
+
+Nenhum, pois a fila estava vazia
+
+
+Os dois valores
+
+
+Depende de a fila ser estática ou dinâmica
+
+Pergunta na posição 4
+4
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 4 
+
+Numa lista circular, o campo proximo do último nó aponta para o primeiro. Qual trecho exibe todos os nós exatamente uma vez?
+
+
+No atual = inicio;
+while (atual != null) {
+    System.out.print(atual.valor + " ");
+    atual = atual.proximo;
+}
+
+
+No atual = inicio;
+while (atual != inicio) {
+    System.out.print(atual.valor + " ");
+    atual = atual.proximo;
+}
+
+
+No atual = inicio;
+while (atual.proximo == null) {
+    System.out.print(atual.valor + " ");
+    atual = atual.proximo;
+}
+
+
+No atual = inicio;
+do {
+    System.out.print(atual.valor + " ");
+    atual = atual.proximo;
+} while (atual != inicio);
+
+
+No atual = inicio;
+do {
+    System.out.print(atual.valor + " ");
+    atual = atual.proximo;
+} while (atual != null);
+
+Pergunta na posição 5
+5
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 5 
+
+Numa lista duplamente encadeada não circular com três elementos, quais campos valem null?
+
+
+Apenas cauda.proximo
+
+
+cabeca.proximo e cauda.anterior
+
+
+Apenas cabeca.anterior
+
+
+Nenhum campo vale null
+
+
+cabeca.anterior e cauda.proximo
+
+Pergunta na posição 6
+6
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 6 
+
+O método insere um valor no fim da lista encadeada simples. Qual condição completa a lacuna?
+
+ 
+
+void inserir(int valor) {
+    No novo = new No(valor);
+    if (inicio == null) {
+        inicio = novo;
+    } else {
+        No atual = inicio;
+        while ( /* LACUNA */ ) {
+            atual = atual.proximo;
+        }
+        atual.proximo = novo;
+    }
+}
+
+
+atual != null
+
+
+atual.proximo != null
+
+
+atual.proximo == null
+
+
+atual == inicio
+
+
+novo.proximo != null
+
+Pergunta na posição 7
+7
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 7 
+
+O método remove a primeira ocorrência de um valor. Qual linha completa a lacuna?
+
+void remover(int valor) {
+    if (inicio == null) {
+        return;
+    }
+    if (inicio.valor == valor) {
+        inicio = inicio.proximo;
+        return;
+    }
+    No anterior = inicio;
+    No atual = inicio.proximo;
+    while (atual != null) {
+        if (atual.valor == valor) {
+            /* LACUNA */
+            return;
+        }
+        anterior = atual;
+        atual = atual.proximo;
+    }
+}
+
+
+atual = null;
+
+
+anterior = atual.proximo;
+
+
+anterior.proximo = atual.proximo;
+
+
+atual.proximo = anterior;
+
+
+inicio = atual.proximo;
+
+Pergunta na posição 8
+8
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 8 
+
+Numa fila estática de capacidade n, o índice é atualizado com fim = (fim + 1) % n. Qual a finalidade do operador %?
+
+
+Impedir que a fila fique cheia, permitindo inserções ilimitadas no vetor.
+
+
+Contar quantos elementos ainda cabem antes do transbordamento.
+
+
+Ordenar os elementos do vetor em ordem crescente a cada inserção.
+
+
+Fazer o índice voltar a 0 ao passar do fim do vetor.
+
+
+Garantir que o vetor não armazene dois valores repetidos na mesma fila.
+
+Pergunta na posição 9
+9
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 9 
+
+A pilha encadeada contém 20 → 10, com topo no nó 20. Considere No novo = new No(30); já criado. Qual trecho empilha o valor 30 corretamente?
+
+
+novo.proximo = topo;
+topo = novo;
+
+
+topo = novo;
+novo.proximo = topo;
+
+
+No atual = topo;
+while (atual.proximo != null) {
+    atual = atual.proximo;
+}
+atual.proximo = novo;
+
+
+novo.proximo = null;
+topo = novo;
+
+
+novo.proximo = topo.proximo;
+topo.proximo = novo;
+
+Pergunta na posição 10
+10
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 10 
+
+A lista duplamente encadeada contém 10 → 20. Considere NoDuplo novo = new NoDuplo(30); já criado. Qual trecho insere o 30 no fim, mantendo corretos os dois sentidos de percurso?
+
+
+cauda.proximo = novo;
+cauda = novo;
+
+
+cauda = novo;
+novo.anterior = cauda;
+
+
+novo.proximo = cauda;
+cauda.anterior = novo;
+cauda = novo;
+
+
+novo.anterior = cabeca;
+cauda = novo;
+
+
+novo.anterior = cauda;
+cauda.proximo = novo;
+cauda = novo;
+
+Pergunta na posição 11
+11
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 11 
+
+O método abaixo remove um valor da lista encadeada simples:
+
+ 
+
+
+void remover(int valor) {
+    No anterior = inicio;
+    No atual = inicio.proximo;
+    while (atual != null) {
+        if (atual.valor == valor) {
+            anterior.proximo = atual.proximo;
+            return;
+        }
+        anterior = atual;
+        atual = atual.proximo;
+    }
+}
+
+ 
+
+ 
+
+ 
+
+Aplicando-o à lista 10 → 20 → 30 com a chamada remover(10), qual é o resultado?
+
+
+A lista fica 20 → 30, pois o nó procurado é encontrado e removido normalmente.
+
+
+Lança NullPointerException, pois anterior ainda vale null na primeira comparação.
+
+
+A lista continua 10 → 20 → 30
+
+
+A lista fica 10 → 30, pois o método remove sempre o nó seguinte ao procurado.
+
+
+A lista fica vazia, pois anterior.proximo desliga toda a cadeia de nós.
+
+Pergunta na posição 12
+12
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 12 
+
+A lista circular contém 10 → 20 → 30, com o nó 30 apontando de volta para o nó 10. Considere No novo = new No(40); já criado. Qual trecho insere o 40 no fim, mantendo a circularidade?
+
+
+No atual = inicio;
+while (atual.proximo != inicio) {
+    atual = atual.proximo;
+}
+atual.proximo = novo;
+novo.proximo = inicio;
+
+
+No atual = inicio;
+while (atual.proximo != null) {
+    atual = atual.proximo;
+}
+atual.proximo = novo;
+
+
+No atual = inicio;
+while (atual != inicio) {
+    atual = atual.proximo;
+}
+atual.proximo = novo;
+novo.proximo = inicio;
+
+
+novo.proximo = inicio;
+inicio = novo;
+
+
+inicio.proximo = novo;
+novo.proximo = inicio;
+
+Pergunta na posição 13
+13
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 13 
+
+O método remove o último nó de uma lista duplamente encadeada:
+
+void removerCauda() {
+
+    cauda = cauda.anterior;
+
+    cauda.proximo = null;
+
+}
+
+Ele funciona para listas com dois ou mais elementos. O que é preciso acrescentar para que trate também a lista com um único elemento?
+
+
+Nada: o método já trata corretamente a lista com um único elemento.
+
+
+Zerar cabeca e cauda quando cabeca == cauda, sem tocar em cauda.anterior.
+
+
+ Inverter a ordem das duas linhas existentes, atribuindo null antes de recuar a cauda.
+
+
+Trocar cauda.anterior por cauda.proximo na primeira linha do método.
+
+
+Encerrar o método sem alterar nada quando cauda.proximo for igual a null
+
+Pergunta na posição 14
+14
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 14 
+
+Uma fila estática usa um vetor de 4 posições, com inicio = 0, fim = 0 e quantidade = 0. A inserção grava em vetor[fim] e faz fim = (fim + 1) % 4; a remoção faz inicio = (inicio + 1) % 4.
+
+Executa-se: enfileirar(1), enfileirar(2), enfileirar(3), desenfileirar(), desenfileirar(), enfileirar(4), enfileirar(5).
+
+Qual é a ordem dos elementos que ainda estão na fila?
+
+
+1, 2, 3, 4, 5
+
+
+ 5, 2, 3
+
+
+ 4, 5
+
+
+ 3, 4, 5
+
+
+5, 4, 3
+
+Pergunta na posição 15
+15
+ 
+Múltipla escolha
+1 ponto
+
+ 
+ 
+Pergunta na posição 15 
+
+Numa fila dinâmica com inicio e fim, o método enfileirar liga o novo nó com fim.proximo = novo sempre que fim não é null. O desenfileirar foi escrito assim:
+
+int desenfileirar() {
+
+    int valor = inicio.valor;
+
+    inicio = inicio.proximo;
+
+    return valor;
+
+}
+
+Qual problema surge ao remover o último elemento da fila?
+
+
+Nenhum: inicio fica null e a fila passa a se comportar como uma fila vazia normal.
+
+
+O método lança NullPointerException ao tentar ler inicio.valor do nó já removido.
+
+
+O valor retornado fica incorreto, pois inicio avança antes da leitura do campo valor.
+
+
+A fila passa a se comportar como pilha, devolvendo o último elemento inserido.
+
+
+fim continua apontando para o nó removido, e o próximo elemento inserido fica inalcançável.
